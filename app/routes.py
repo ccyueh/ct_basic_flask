@@ -14,7 +14,14 @@ def index():
 
 @app.route('/data/<name>', methods=['GET'])
 def pageData(name=''):
-    return render_template('data.html', name=name)
+    sports = {
+        'football': 'New England Patriots',
+        'baseball': 'Boston Red Sox',
+        'hockey': 'Boston Bruins',
+        'basketball': 'Boston Celtics',
+        'soccer': 'New England Revolution'
+    }
+    return render_template('data.html', name=name, sports=sports)
 
 @app.route('/go_home')
 def go_home():

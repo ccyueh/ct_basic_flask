@@ -4,4 +4,13 @@
   <h1>Data</h1>
   <h3>{{ name }} was passed.</h3>
 
+  <h1>Boston Sports</h1>
+  <p>My favorite team is {{ sports['basketball'] }}</p>
+
+  <ul>
+    {% for k,v in sports.items() %}
+      <li> {{ k.title() }}: {{ sports[k] }}</li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
